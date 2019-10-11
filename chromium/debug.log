@@ -1,0 +1,22 @@
+[1207/164338.988:ERROR:crash_report_database_win.cc(569)] CreateDirectory C:\Users\C44331\AppData\Local\Temp\scoped_dir13096_32176\Crashpad: The system cannot find the path specified. (0x3)
+[1207/164339.024:ERROR:registration_protocol_win.cc(84)] TransactNamedPipe: The pipe has been ended. (0x6D)
+[1207/164339.038:ERROR:crash_report_database_win.cc(569)] CreateDirectory C:\Users\C44331\AppData\Local\Temp\scoped_dir13096_32176\Crashpad: The system cannot find the path specified. (0x3)
+[0506/160319.802:ERROR:file_io_win.cc(161)] CreateFile C:\Users\C47273\AppData\Local\Temp\scoped_dir19976_2522\Crashpad\settings.dat: The system cannot find the path specified. (0x3)
+[0506/160319.803:ERROR:file_io_win.cc(170)] CreateFile C:\Users\C47273\AppData\Local\Temp\scoped_dir19976_2522\Crashpad\reports\ddd3e6f3-602a-4a46-a97a-ecc55a7b4f88.dmp: The system cannot find the path specified. (0x3)
+[0506/160319.805:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0510/103948.370:ERROR:file_io_win.cc(161)] CreateFile C:\Users\C47273\AppData\Local\Temp\scoped_dir13684_19304\Crashpad\settings.dat: The system cannot find the path specified. (0x3)
+[0510/103948.373:ERROR:file_io_win.cc(170)] CreateFile C:\Users\C47273\AppData\Local\Temp\scoped_dir13684_19304\Crashpad\reports\3881c75e-f8f1-4a15-b69d-3293098e3511.dmp: The system cannot find the path specified. (0x3)
+[0510/103948.373:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0510/104000.268:ERROR:file_io_win.cc(161)] CreateFile C:\Users\C47273\AppData\Local\Temp\scoped_dir7744_3064\Crashpad\settings.dat: The system cannot find the path specified. (0x3)
+[0510/104000.269:ERROR:file_io_win.cc(170)] CreateFile C:\Users\C47273\AppData\Local\Temp\scoped_dir7744_3064\Crashpad\reports\47edd2c3-5227-44ae-ada6-030e8c1ca5bf.dmp: The system cannot find the path specified. (0x3)
+[0510/104000.269:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0513/080753.251:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0513/080753.255:ERROR:exception_snapshot_win.cc(88)] thread ID 12672 not found in process
+[0513/080753.255:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: An attempt was made to access an exiting process. (0xc000010a)
+[0829/075052.736:ERROR:file_io_win.cc(161)] CreateFile C:\Users\C54480\AppData\Local\Temp\scoped_dir74068_12031\Crashpad\settings.dat: The system cannot find the path specified. (0x3)
+[0829/075052.743:ERROR:file_io_win.cc(170)] CreateFile C:\Users\C54480\AppData\Local\Temp\scoped_dir74068_12031\Crashpad\reports\e80caca5-ae2b-4310-8134-60d08beba698.dmp: The system cannot find the path specified. (0x3)
+[0829/075052.743:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0829/112956.745:ERROR:crash_report_database_win.cc(569)] CreateDirectory C:\Users\C54480\AppData\Local\Temp\scoped_dir84048_15448\Crashpad: The system cannot find the path specified. (0x3)
+[0829/112956.798:ERROR:registration_protocol_win.cc(84)] TransactNamedPipe: The pipe has been ended. (0x6D)
+[0829/112956.803:ERROR:crash_report_database_win.cc(569)] CreateDirectory C:\Users\C54480\AppData\Local\Temp\scoped_dir84048_15448\Crashpad: The system cannot find the path specified. (0x3)
+[0829/133416.261:ERROR:registration_protocol_win.cc(56)] CreateFile: The system cannot find the file specified. (0x2)

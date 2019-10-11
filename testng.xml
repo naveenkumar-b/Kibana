@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<test name="VerifyAPILinkTest">
+    <classes>
+      <class name="com.sampleapp.tests.VerifyAPILinkTest"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="VerifyAppDirectoryLinkTest">
+    <classes>
+      <class name="com.sampleapp.tests.VerifyAppDirectoryLinkTest"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="VerifyEnterpriseLinkTest">
+    <classes>
+      <class name="com.sampleapp.tests.VerifyEnterpriseLinkTest"/>
+    </classes>
+  </test>
+  <test name="VerifyPricingLinkTest">
+    <classes>
+      <class name="com.sampleapp.tests.VerifyPricingLinkTest"/>
+    </classes>
+  </test> 
+  <test name="VerifyProductLinkTest">
+    <classes>
+      <class name="com.sampleapp.tests.VerifyProductLinkTest"/>
+    </classes>
+  </test>
+  <test name="VerifySlackGuideLinkTest">
+    <classes>
+      <class name="com.sampleapp.tests.VerifySlackGuideLinkTest"/>
+    </classes>
+  </test> 
+  <test name="VerifySupportLinkTest">
+    <classes>
+      <class name="com.sampleapp.tests.VerifySupportLinkTest"/>
+    </classes>
+  </test>
+</suite> <!-- Suite -->

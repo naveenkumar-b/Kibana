@@ -1,0 +1,62 @@
+node('windows'){
+	String mvnHome = tool name: 'Maven 3.3.3', type: 'maven';
+    String jdkHome = tool name: 'SUN JDK 1.8', type: 'jdk';
+	String Result
+
+	try{
+    	env.JAVA_HOME="${jdkHome}"
+		env.PATH="${env.JAVA_HOME}/bin:${env.PATH}"	
+		bat 'java -version'
+		if(env.M2_HOME){
+		    mvnHome = env.M2_HOME;
+		}
+		echo mvnHome
+		stage('Project Checkout'){
+        		def git_branch='master'
+				jobStage='Project Checkout'
+				checkout([$class: 'GitSCM', branches: [[name: git_branch]], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: 'testautomation']], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'sudheendran.lakshman@gmail.com', url: 'https://github.com/ThinkPowerful/Kibana.git']]])
+				echo 'code checkout done'
+			}
+		
+		stage('Regression Suite - Slack') {	  
+
+			jobStage='Regression Suite - Slack'
+			withEnv(["PATH+M2_HOME=${mvnHome}/bin"]){								
+				echo 'line K-1'		
+				try
+				{
+					echo 'line K-2'
+                    dir('testautomation/'){
+                    	bat "mvn -X clean install"
+                    }
+					echo 'line K-3'
+					publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'testautomation/ExtentReports/', reportFiles: '*.*', reportName: 'Regression Report - Slack', reportTitles: ''])
+					echo 'line K-4'
+					zip dir: './testautomation/ExtentReports/', glob: '', zipFile: 'Regression Report - Slack.zip'
+					emailext attachmentsPattern: 'Regression Report - Slack.zip', body: 'Regression Testing for Concord is passed', subject: 'Testing Done!!! Pipeline Job Name: -${JOB_NAME} & Build Number-${BUILD_NUMBER}', to: "${params.BUILD_USER}"
+				}
+				catch(e)
+				{				 				
+					echo 'line K-5'
+                  	publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'testautomation/ExtentReports/', reportFiles: '*.*', reportName: 'Regression Report - Slack', reportTitles: ''])
+					echo 'line K-6'
+					zip dir: './testautomation/ExtentReports/', glob: '', zipFile: 'Regression Report - Slack.zip'
+					emailext attachmentsPattern: 'Regression Report - Slack.zip', body: 'Regression Testing for Slack is failed', subject: 'Testing Done!!! Pipeline Job Name: -${JOB_NAME} & Build Number-${BUILD_NUMBER}', to: "${params.BUILD_USER}"
+					throw e
+				}
+				echo 'line K-6'     
+		}
+	  }	
+		Result='Success'
+		}
+		
+	catch(e)	{      		
+				echo 'error'
+				Result='Failure'
+				throw e
+			}
+	
+	finally{
+		echo Result
+	}
+}

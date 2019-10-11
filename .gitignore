@@ -1,0 +1,14 @@
+target/
+.settings/
+.idea/
+.project
+.classpath
+.factorypath
+.apt_generated
+.springBeans
+log4j.log
+trace.log
+*.iml
+*.metadata/
+/bin/
+test-output/
