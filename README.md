@@ -1,3 +1,2 @@
 # kibana
 # Hackathon
-# Kibana
