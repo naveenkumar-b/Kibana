@@ -1,1 +1,1 @@
-adsstatus
+sstatus new text
